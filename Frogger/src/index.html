@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <style>
+      .movekey {
+        width:18px;
+        text-align:center;
+        border-radius:3px;
+        background-color:lightgray;
+      }
+      .gameover {
+        font-family:sans-serif;
+        font-size:80px;
+        fill:red;
+        background-color: brown;
+      }
+      #score
+      {
+          position: absolute;
+          top: 10;
+          left: 500;
+          z-index: 100;
+      }
+    </style>
+    <title>FIT2102 A1 2022</title>
+    <script src="../dist/main.js"></script></head>
+  <body width="100%", height="100%">
+    <h1>Frogger</h1>
+
+    <div id="score"> <h2>Score: <a id="SHOWSCORE"></a></h2> </div> 
+    <!-- Canvas style="background-color: rgb(33, 181, 7)" -->
+    <svg id="CANVAS" width="600" height="600" style="background-color: rgb(33, 181, 7)">
+
+      <g id=backgroundLayer>
+
+        <image id="GRASS" href="../assets/grass.png" width="100%" height="46%" y="325"/>
+        <image id="GRASS" href="../assets/grass.png" width="100%" height="46%" y="252"/>
+        <image id="GRASS" href="../assets/grass.png" width="100%" height="46%" y="-20"/>
+
+        <image id="RIVER" href="../assets/river1.jpg" width="100%" height="50%" y="30"/>
+
+        <image id="SEPARATOR" href="../assets/separator.png" width="100%" height="46%" y="-60"/>
+        <image id="SEPARATOR" href="../assets/separator.png" width="100%" height="46%" y="145"/>
+
+        <image id="ROAD" href="../assets/road.png" width="100%" height="40.5%" y="320"/>
+
+      </g>
+
+      <g id=objectLayer>
+        
+      </g>
+
+      <g id=foregroundLayer>
+
+        <image id="PEPEGA" href="../assets/stone1.png" width="60" height="60" x="280" y="-5"/>
+
+        <image id="FROG" href="../assets/frog.png" width="40" height="40"/>
+
+      </g>
+
+    </svg>
+    <h2>Controls:</h2>
+      <table>
+          <!-- Control Instructions -->
+          <tr><td>Move Up</td><td><div id="wkey" class="movekey">&#87;</div></td></tr>
+          <tr><td>Move Down</td><td><div id="skey" class="movekey">&#83;</div></td></tr>
+          <tr><td>Move Left</td><td><div id="akey" class="movekey">&#65;</div></td></tr>
+          <tr><td>Move Right</td><td><div id="dkey" class="movekey">&#68;</div></td></tr>
+      </table>
+
+    <h2>Your Quest:</h2>
+    <p>Aiming to be the Number One WICKED, Sir Pepega intends to cross the road and make his way to the other side of the river to collect the pepega stones</p>
+    
+    <h2>Instructions:</h2>
+    <p>Keep on crossing the road and collecting as many pepega stones as you can. Your score will reset upon death.</p>
+  </body>
+</html>
